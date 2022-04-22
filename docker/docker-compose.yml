@@ -1,0 +1,21 @@
+services:
+  app:
+    build:
+      context: ''
+      dockerfile: Dockerfile
+    container_name: app
+    restart: always
+    working_dir: /var/www/
+    volumes:
+      # CURRENT DIRECTORY : Docker WSL Directory
+      - ../:/var/www
+  nginx:
+    image: nginx:1.19-alpine
+    container_name: nginx
+    restart: always
+    ports:
+      - 8000:80
+    volumes:
+      # CURRENT DIRECTORY : Docker WSL Directory
+      - ../:/var/www
+      - ./nginx:/etc/nginx/conf.d
