@@ -16,7 +16,7 @@ Dockerize PHP App using NGINX and PHP-FPM
  1. Access the file docker/docker-compose.yml file
  2. You will see the port `- 8000:80` change the `8000` part to any ports you want
  3. open terminal and change directory to docker `$ cd docker`
- 4. Run `$ docker-compose up -d
+ 4. Run `$ docker-compose up -d`
  5. To check if installed successfully run at browser `localhost:<port>`
  6. Enjoy!
 
@@ -26,7 +26,7 @@ Dockerize PHP App using NGINX and PHP-FPM
  1. Open terminal and run `$ docker ps`
  2. You will see all the running docker container, find the name where the php runs _Usually at port 9000/tcp_ (Highlighted part)
  ![image](https://user-images.githubusercontent.com/78188741/164604766-6fe8997d-2b06-4d7c-9329-8bfc92e5afeb.png)
- 4. Run `docker exec -it <name> bash`
+ 4. Run `$ docker exec -it <name> bash`
  5. To check if success run `$ php -v`
  6. Enjoy
  
